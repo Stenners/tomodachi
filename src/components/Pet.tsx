@@ -4,7 +4,6 @@ import { FaceSleepy } from "./faces/FaceSleepy";
 
 interface PetProps {
   mood: "happy" | "sleepy";
-  hasBow?: boolean;
 }
 
 export function Pet({ mood }: PetProps) {
