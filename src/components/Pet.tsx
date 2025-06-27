@@ -1,7 +1,6 @@
 import { Body } from "./Body";
 import { FaceHappy } from "./faces/FaceHappy";
 import { FaceSleepy } from "./faces/FaceSleepy";
-import { Bow } from "./accessories/Bow";
 
 interface PetProps {
   mood: "happy" | "sleepy";
@@ -14,7 +13,6 @@ export function Pet({ mood, hasBow = false }: PetProps) {
       <Body />
       {mood === "happy" && <FaceHappy />}
       {mood === "sleepy" && <FaceSleepy />}
-      {/* {hasBow && <Bow />} */}
     </svg>
   );
 }

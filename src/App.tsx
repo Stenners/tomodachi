@@ -4,7 +4,7 @@ import "./App.css";
 export function App() {
   return (
     <div className="pet-container">
-      <Pet hasBow={true} mood="happy" />
+      <Pet mood="happy" />
     </div>
   );
 };
