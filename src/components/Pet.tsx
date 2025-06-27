@@ -7,7 +7,7 @@ interface PetProps {
   hasBow?: boolean;
 }
 
-export function Pet({ mood, hasBow = false }: PetProps) {
+export function Pet({ mood }: PetProps) {
   return (
     <svg width="400" height="400" viewBox="0 0 400 400">
       <Body />
