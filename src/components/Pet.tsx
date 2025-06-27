@@ -1,0 +1,20 @@
+import { Body } from "./Body";
+import { FaceHappy } from "./faces/FaceHappy";
+import { FaceSleepy } from "./faces/FaceSleepy";
+import { Bow } from "./accessories/Bow";
+
+interface PetProps {
+  mood: "happy" | "sleepy";
+  hasBow?: boolean;
+}
+
+export function Pet({ mood, hasBow = false }: PetProps) {
+  return (
+    <svg width="400" height="400" viewBox="0 0 400 400">
+      <Body />
+      {mood === "happy" && <FaceHappy />}
+      {mood === "sleepy" && <FaceSleepy />}
+      {/* {hasBow && <Bow />} */}
+    </svg>
+  );
+}
