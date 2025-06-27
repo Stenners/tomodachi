@@ -4,11 +4,12 @@ import { FaceSleepy } from "./faces/FaceSleepy";
 
 interface PetProps {
   mood: "happy" | "sleepy";
+  size?: number;
 }
 
-export function Pet({ mood }: PetProps) {
+export function Pet({ mood, size = 300 }: PetProps) {
   return (
-    <svg width="400" height="400" viewBox="0 0 400 400">
+    <svg width={size} height={size} viewBox="0 0 400 400">
       <Body />
       {mood === "happy" && <FaceHappy />}
       {mood === "sleepy" && <FaceSleepy />}
