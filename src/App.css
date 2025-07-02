@@ -4,7 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 18px;
   height: 100vh;
+  color: #3f2313;
 }
 
 body {

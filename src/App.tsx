@@ -7,6 +7,7 @@ import {
   feedPet,
   setSleeping,
   updateHunger,
+  updateSleepiness,
   getPetMood,
 } from "./services/petStateService";
 import type { PetState } from "./services/petStateService";
@@ -28,6 +29,14 @@ export function App() {
     return () => clearInterval(interval);
   }, []);
 
+  // Periodically update sleepiness
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPetState((state) => updateSleepiness(state));
+    }, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
   // Feed action
   const handleFeed = () => setPetState((state) => feedPet(state));
   // Sleep/wake actions
@@ -43,6 +52,7 @@ export function App() {
         <Pet mood={mood} />
         <PetControls
           hunger={petState.hunger}
+          sleepiness={petState.sleepiness}
           isSleeping={petState.isSleeping}
           onFeed={handleFeed}
           onSleep={handleSleep}
