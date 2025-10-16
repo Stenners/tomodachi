@@ -1,7 +1,7 @@
 export const FaceSleepy = ({ strokeColor = "#6c3c22", strokeWidth = 8 }) => (
   <g id="face-sleepy">
     <path
-      d="M200 130 Q 210 110 220 130"
+      d="M200 70 Q 210 110 220 130"
       stroke={strokeColor}
       strokeWidth={strokeWidth}
       strokeLinecap="round"

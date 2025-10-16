@@ -48,7 +48,7 @@ export function FaceHappy({
       />
       <ellipse
         style={{
-          fill: blushColor
+          fill: blushColor,
         }}
         cx="135"
         cy="155"
@@ -57,7 +57,7 @@ export function FaceHappy({
       />
       <ellipse
         style={{
-          fill: blushColor
+          fill: blushColor,
         }}
         cx="268"
         cy="155"
